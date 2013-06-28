@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+/*基础样式重置*/
+* {
+	margin: 0;
+	padding: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+a img, a {
+	outline: 0;
+	border: 0;
+}
+
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: ""
+}
+
+blockquote, q {
+	quotes: "" ""
+}
+
+.clear {
+	clear: both
+}
+
+.clearfix:after {
+	display: block;
+	visibility: hidden;
+	content: ".";
+	clear: both;
+	text-indent: -9999px;
+	height: 0;
+}
+
+fieldset {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+/*标签样式*/
+body {
+	font-size: 14px;
+	line-height: 1.5em;
+	background-color: #FFFDEB;
+	font-family: Tahoma, Arial, "微软雅黑", "黑体", "宋体";
+}
+
+p {
+	margin: 2px;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+h2.page_404{
+	font-size: 35px;
+	line-height: 60px;
+	color: #e13c36;
+}
+p.page_404{
+	font-size: 18px;
+	line-height: 30px;
+	color: #e13c36;
+}
+
+/*整体样式*/
+#container {
+	width: 960px;
+	margin: 0 auto;
+	background: url("img/header_pic.jpg") no-repeat top center;
+}
+
+#header, #user, #footer, #body{
+	margin: 0 10px;
+}
+
+/*头部样式*/
+#header {
+	height: 380px;
+}
+#header a{
+	position: relative;
+	display: block;
+	line-height: 40px;
+	font-size: 25px;
+	color: #482915;
+}
+#header a:hover{
+	color: #984905;
+}
+#header .album{
+	left: 80px;
+	top: 10;
+}
+#header .home{
+	left: 180px;
+	top: -20px;
+}
+#header img.logo{
+	position: relative;
+	display: block;
+	left: 350px;
+	top: -80px;
+}
+#header .message{
+	background: url("img/header_messgae.jpg") no-repeat 0 0;
+	position: relative;
+	top: -20px;
+	width: 360px;
+	height: 200px;
+	padding-top: 30px;
+	padding-left: 30px;
+}
+#header .message h1{
+	line-height: 40px;
+	font-size: 30px;
+}
+#header .message p{
+	line-height: 25px;
+	text-indent: 2em;
+}
+#header .menu{
+	position: relative;
+	left: 720px;
+	top: -190px;
+	width: 250px;
+}
+#header .menu a{
+	display: inline;
+}
+/*主体样式*/
+#body{
+	padding: 20px 0;
+	border-radius: 10px;
+}
+
+/*页脚*/
+#footer {
+	margin-top: 10px;
+	padding-top: 10px;
+	height: 138px;
+	background: url("img/footer_bg.gif") no-repeat top center;
+}
+
+#footer p{
+	margin-left: 100px;
+	line-height: 30px;
+}

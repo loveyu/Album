@@ -1,0 +1,153 @@
+@charset "UTF-8";
+@import "common.css";
+
+#user {
+	background-color: #fff;
+	padding: 5px;
+}
+
+#user a {
+	color: #8b0000;
+	text-decoration: none;
+}
+
+#user .nav {
+	float: left;
+	width: 140px;
+	background-color: #bbefcc;
+}
+
+#user .nav ul {
+	list-style: none;
+	width: 100%;
+}
+
+#user .nav ul a {
+	display: block;
+	background-color: #f4f4f4;
+	font-size: 16px;
+	line-height: 35px;
+	padding: 0 15px;
+}
+
+#user .nav ul a.active {
+	background-color: #ebe5ff;
+}
+
+#user .nav ul a:hover {
+	background-color: #c1d2fc;
+}
+
+#user .content {
+	float: right;
+	width: 760px;
+	background-color: #FFFDEB;
+}
+
+#user .my_rand h2{
+	font-size: 18px;
+	line-height: 45px;
+	font-weight: bolder;
+}
+#user .my_rand .list li {
+	float: left;
+}
+
+#user .my_rand img {
+	width: 245px;
+	height: 170px;
+	display: block;
+	border: #000 1px solid;
+	margin: 1px;
+}
+
+#user .album {
+	width: 97%;
+	margin: 10px auto;
+}
+
+#user .album table {
+	width: 100%;
+	background-color: #e9e7d5;
+	font-size: 16px;
+}
+
+#user .album table thead {
+	background-color: #f4c772;
+	color: #ffffff;
+}
+
+#user .album table td, #user .album table th {
+	border: solid 1px #fcefa1;
+	padding: 3px 5px;
+}
+
+#user .album table tbody {
+	color: #000000;
+}
+
+#user .album table tbody tr.tr_1 {
+	background-color: #fbf4e0;
+}
+
+#user .album table tbody tr:hover {
+	background-color: #fff4c4;
+	color: blue;
+}
+
+#user .album table a:hover {
+	color: #006400;
+}
+
+/*图片添加框*/
+#album_edit .new {
+	background-color: #fdedd6;
+	margin: 5px;
+}
+
+#album_edit .new .img {
+	float: left;
+	width: 300px;
+	padding-left: 40px;
+	padding-top: 20px;
+}
+
+#album_edit .new .form {
+	float: right;
+	width: 410px;
+	background-color: #fff6d6;
+}
+
+/*图片列表*/
+#album_edit .picture{
+	margin: 5px;
+}
+#album_edit .picture .list{
+	margin: 10px 0;
+	background-color: #fff2de;
+	padding: 5px 0;
+}
+#album_edit .picture .list form{
+	margin: 0 5px;
+}
+#album_edit .picture .img img{
+	display: block;
+	border: 2px solid #cceeaa;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.63);
+	margin: 5px;
+}
+#album_edit .picture .form{
+	margin-left: 20px;
+}
+
+#profile p{
+	line-height: 30px;
+}
+
+#album_title_form{
+	margin: 15px 10px;
+}
+#album_title_form div{
+	float: left;
+	margin-left: 10px;
+}

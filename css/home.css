@@ -1,0 +1,342 @@
+@charset "UTF-8";
+@import "common.css";
+
+#home .list li {
+	float: left;
+}
+
+#home .list img {
+	width: 230px;
+	height: 170px;
+	display: block;
+	border: #000 1px solid;
+	margin: 1px;
+}
+
+#album .image img {
+	width: 800px;
+}
+
+/*图汇列表*/
+#album_list {
+	width: 750px;
+	margin: 20px 0 20px 40px;
+}
+
+#album_list .list {
+	border-bottom: #a85915 solid 1px;
+	margin-bottom: 30px;
+}
+
+#album_list h3 {
+	line-height: 35px;
+	font-size: 22px;
+}
+
+#album_list h3 a {
+	color: #111;
+}
+
+#album_list h3 a:hover {
+	color: #006400;
+}
+
+#album_list .list .image img {
+	display: block;
+	margin: 5px auto;
+	width: 700px;
+	border: 2px #fff solid;
+	padding: 2px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.63);
+}
+
+.tag {
+	margin: 10px 30px 5px;
+	text-align: right;
+	line-height: 25px;
+	font-size: 15px;
+	padding: 0px;
+}
+
+.tag a {
+	background-color: #333;
+	color: #fff;
+	padding: 2px 10px;
+	border-radius: 5px;
+	margin: 0 3px;
+}
+
+.tag a:hover {
+	background-color: #aaa;
+	color: #000;
+}
+
+#album_list .user {
+	text-align: right;
+	line-height: 20px;
+	font-size: 16px;
+	margin-right: 30px;
+}
+
+#album_list .user a {
+	color: #334499;
+	margin-left: 5px;
+}
+
+/*图汇页面*/
+#album {
+	width: 750px;
+	margin: 20px 0 20px 40px;
+}
+
+#album .list {
+	border-bottom: #a85915 solid 1px;
+	margin-bottom: 30px;
+}
+
+#album .info {
+	border-bottom: solid 3px #997a38;
+}
+
+#album h2 {
+	line-height: 40px;
+	font-size: 28px;
+	color: #006400;
+}
+
+#album .list {
+	background-color: #fefff3;
+	margin: 10px 0;
+	border: 2px solid #eee;
+}
+
+#album .list h4 {
+	text-align: center;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+#album .list h4 a {
+	color: #011;
+}
+
+#album .list h4 a:hover {
+	color: #25861d;
+}
+
+#album .list .image img {
+	display: block;
+	margin: 5px auto;
+	width: 700px;
+	border: 2px #fff solid;
+	padding: 2px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.63);
+}
+
+#album .list .image p {
+	width: 700px;
+	margin: 0 auto;
+}
+
+#album .user {
+	text-align: right;
+	line-height: 20px;
+	font-size: 16px;
+	margin-right: 30px;
+}
+
+#album .user a {
+	color: #334499;
+	margin-left: 5px;
+}
+
+#album a.edit {
+	background-color: #c1ddd3;
+	color: #334499;
+	padding: 2px 5px;
+	margin: 2px 5px;
+	border-radius: 4px;
+}
+#album a.edit:hover{
+	color: #8b0000;
+	background-color: #ddddf4;
+}
+
+/*分页*/
+#album_list .page_nav {
+	text-align: center;
+	font-size: 17px;
+}
+
+#album_list .page_nav a {
+	color: #556b2f;
+	background-color: #fada7a;
+	padding: 3px 5px;
+	margin: 0 5px;
+	border: solid 1px #757575;
+	border-radius: 5px;
+}
+
+#album_list .page_nav a:hover {
+	background-color: #fff;
+}
+
+#album_list .page_nav a.active {
+	background-color: #ddf575;
+	color: #006400;
+}
+
+/*登录注册*/
+#login {
+	width: 299px;
+	height: 378px;
+	background: url("img/login.gif") no-repeat top center;
+	margin: 20px 0 30px 200px;
+	padding-top: 40px;
+}
+
+#login h3 {
+	margin: 0 30px;
+	font-size: 25px;
+	text-align: center;
+}
+#login h3.error{
+	color: #ff1510;
+}
+#login h3.notice{
+	color: #ff32c3;
+}
+#login form {
+	margin: 0 30px;
+	font-size: 17px;
+}
+
+#login form .input {
+	display: block;
+}
+
+#login form .checkbox {
+	margin-right: 10px;
+}
+
+#login form p {
+	line-height: 30px;
+	margin-top: 10px;
+}
+
+#login form p.error {
+	color: red;
+}
+
+#login .submit {
+	position: relative;
+	top: 95px;
+	text-align: center;
+}
+
+#login .submit button {
+	padding: 5px 10px;
+}
+
+/*注册框的不同*/
+#login .register {
+	text-align: center;
+}
+
+#login .register button {
+	padding: 5px 10px;
+}
+
+/*用户页面*/
+#user_page {
+	margin: 30px;
+	background-color: #fffcf6;
+	border-left: 10px solid #ebfffc;
+	padding-top: 20px;
+	padding-left: 15px;
+	padding-bottom: 20px;
+}
+
+#user_page h3 {
+	font-size: 22px;
+	color: #006400;
+	line-height: 40px;
+}
+
+#user_page p {
+	line-height: 30px;
+	font-size: 16px;
+}
+
+#user_page p a {
+	color: #556b2f;
+	margin-left: 5px;
+}
+
+#user_page p a:hover {
+	color: #a52a2a;
+}
+
+#user_page p.signa {
+	text-indent: 15px;
+	color: #8a2be2;
+}
+
+/*图片页面*/
+#picture {
+	width: 750px;
+	margin: 20px 0 20px 40px;
+}
+
+#picture h2 {
+	line-height: 40px;
+	font-size: 28px;
+	color: #006400;
+}
+
+#picture .image img {
+	display: block;
+	margin: 5px auto;
+	width: 700px;
+	border: 2px #fff solid;
+	padding: 2px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.63);
+}
+
+#picture .image p {
+	width: 700px;
+	margin: 0 auto;
+}
+
+#picture .info {
+	margin-top: 20px;
+	padding-left: 50px;
+	padding-right: 15px;
+	background-color: #fef1ec;
+	text-align: right;
+	line-height: 30px;
+}
+
+#picture .info p {
+	display: inline;
+}
+
+#picture .user {
+	text-align: right;
+	line-height: 20px;
+	font-size: 16px;
+	margin-right: 30px;
+}
+
+#picture .user a {
+	color: #334499;
+	margin-left: 5px;
+}
+
+#picture .album {
+	font-size: 16px;
+}
+
+#picture .album a:hover {
+	color: #000;
+}

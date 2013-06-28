@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+/*基础样式重置*/
+* {
+	margin: 0;
+	padding: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+a img, a {
+	outline: 0;
+	border: 0;
+}
+
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: ""
+}
+
+blockquote, q {
+	quotes: "" ""
+}
+
+.clear {
+	clear: both
+}
+
+.clearfix:after {
+	display: block;
+	visibility: hidden;
+	content: ".";
+	clear: both;
+	text-indent: -9999px;
+	height: 0;
+}
+
+fieldset {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+/*标签样式*/
+body {
+	background: url("img/bg.gif");
+	font-size: 14px;
+	line-height: 1.5em;
+	color: #757575;
+	font-family: Tahoma, Arial, "微软雅黑", "黑体", "宋体";
+}
+
+p {
+	margin: 2px;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+/*内容样式*/
+#container {
+	width: 100%;
+	min-width: 800px;
+}
+
+#header, #admin, #footer {
+	margin: 0 20px;
+}
+
+/*头部样式*/
+#header {
+	height: 50px;
+	padding-top: 10px;
+}
+
+#header h1 {
+	line-height: 35px;
+	font-size: 30px;
+	margin-left: 15px;
+	float: left;
+}
+
+#header .user {
+	width: 400px;
+	height: 40px;
+	float: right;
+	border: solid #006400 1px;
+	background-color: #eeeeee;
+	border-radius: 5px;
+}
+
+#header .user p {
+	float: left;
+	line-height: 40px;
+	font-size: 20px;
+	padding-left: 5px;
+	margin: 0;
+}
+
+#header .user p strong {
+	color: #006400;
+}
+
+#header .user ul {
+	float: right;
+	line-height: 40px;
+	margin-left: 20px;;
+	font-size: 22px;
+}
+
+#header .user li {
+	float: left;
+	line-height: 40px;
+}
+
+#header .user li a {
+	text-decoration: none;
+	display: block;
+	padding: 0 10px;
+	color: #006400;
+}
+
+#header .user li a:hover {
+	background-color: #cccccc;
+	color: #ac6f4f;
+}
+
+/*控制板样式*/
+#admin #tabs_user_manger table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#tabs_user_manger thead {
+	background-color: #978;
+	color: #ffffff;
+}
+
+#tabs_user_manger th, #tabs_user_manger td {
+	text-align: left;
+	border: #cccccc 1px solid;
+	padding: 5px;
+}
+
+#tabs_user_manger tbody tr:hover {
+	background-color: #dda;
+}
+
+#tabs_user_manger .tr_0 {
+	background-color: #e6e6e6;
+}
+
+#tabs_user_manger .tr_1 {
+	background-color: #fef1ec;
+}
+
+/*表单段落样式*/
+form p {
+	margin: 10px 0;
+}
+
+form button {
+	padding: 5px 10px;
+	margin-top: 10px;
+}
+
+/*底部样式*/
+#footer {
+	margin-top: 20px;
+	font-size: 18px;
+}
+#footer a{
+	background-color: #fff;
+	color: #430;
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 2px 5px;
+}
+#footer a:hover{
+	color: #82a;
+	background-color: #e6e6e6;
+}
