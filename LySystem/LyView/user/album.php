@@ -10,7 +10,7 @@
 		</thead>
 		<tbody>
 <?php $i=0; foreach(get_lib("LibAlbum")->album_list() as $v){?>
-			<tr class="tr_<?=$i++%2?>"><td><?=$v['id']?></td><td><?=$v['name']?></td><td><?=$v['public']?></td><td><a href="#status_<?=$v['id']?>_<?=$v['status']?>"><?=$v['status']?"发布":"草稿"?></a></td><td><a href="#del_<?=$v['id']?>">删除</a>&nbsp;<a href="<?=get_url("User/edit/".$v['id'])?>">编辑</a></td></tr>
+			<tr class="tr_<?php echo $i++%2?>"><td><?php echo $v['id']?></td><td><?php echo $v['name']?></td><td><?php echo $v['public']?></td><td><a href="#status_<?php echo $v['id']?>_<?php echo $v['status']?>"><?php echo $v['status']?"发布":"草稿"?></a></td><td><a href="#del_<?php echo $v['id']?>">删除</a>&nbsp;<a href="<?php echo get_url("User/edit/".$v['id'])?>">编辑</a></td></tr>
 <?php }?>
 		</tbody>
 	</table>

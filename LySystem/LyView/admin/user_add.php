@@ -1,5 +1,5 @@
 <div id="tabs_user_add">
-	<form action="<?=get_url("Admin/ajax/user_add")?>" method="post">
+	<form action="<?php echo get_url("Admin/ajax/user_add")?>" method="post">
 		<p><label>用户名:<input name="user" type="text" value="" /></label></p>
 		<p><label>密码:<input name="password" type="password" value="" /></label></p>
 		<p><label>确认密码:<input name="confirm" type="password" value="" /></label></p>

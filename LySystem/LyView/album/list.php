@@ -7,16 +7,16 @@
 <?php foreach($list as $v){?>
 	<div class="list">
 		<div class="title">
-			<h3><a href="<?=get_url("album_".$v['album_id'])?>" title="访问图集"><?=$v['title']?></a></h3>
+			<h3><a href="<?php echo get_url("album_".$v['album_id'])?>" title="访问图集"><?php echo $v['title']?></a></h3>
 		</div>
 		<div class="user">
-			<p>用户:<a href="<?=get_url("user_".$v['user_id'])?>" title="查看用户信息"><?=$v['user_name']?></a></p>
+			<p>用户:<a href="<?php echo get_url("user_".$v['user_id'])?>" title="查看用户信息"><?php echo $v['user_name']?></a></p>
 		</div>
 		<div class="image">
-			<a class="album_list_image" href="<?=get_pic_big($v['pic_file'])?>"><img src="<?=get_pic_big($v['pic_file'])?>" alt="<?=$v['title']?>" /></a>
+			<a class="album_list_image" href="<?php echo get_pic_big($v['pic_file'])?>"><img src="<?php echo get_pic_big($v['pic_file'])?>" alt="<?php echo $v['title']?>" /></a>
 		</div>
 		<div class="tag">
-			<p>标签:<?=get_tags($v['tag'])?></p>
+			<p>标签:<?php echo get_tags($v['tag'])?></p>
 		</div>
 	</div>
 <?php }?>

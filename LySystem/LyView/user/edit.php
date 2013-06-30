@@ -1,6 +1,6 @@
 <script>
-	var ALBUM_ID = <?=$id?>;
-	var PICTURE_URL = URL+"<?=str_replace("//","/",get_config("picture","path")."/")?>";
+	var ALBUM_ID = <?php echo $id?>;
+	var PICTURE_URL = URL+"<?php echo str_replace("//","/",get_config("picture","path")."/")?>";
 	$(function () {
 		load_album_page(ALBUM_ID);
 		$("#album_title_form").ajaxForm(album_ajax_update);
@@ -8,18 +8,18 @@
 	});
 </script>
 <div id="album_edit">
-	<form id="album_title_form" class="clearfix" action="<?=get_url("User/album_edit")?>" method="post">
+	<form id="album_title_form" class="clearfix" action="<?php echo get_url("User/album_edit")?>" method="post">
 		<div><label>标题：<input name="name" type="text" value="" /></label></div>
 		<div><label>公开状态: <select name="public"><option value="yes">公开</option><option value="no">私有</option></select></label></div>
 		<div><label>发布状态: <select name="show"><option value="1">发布</option><option value="0">草稿</option></select></label></div>
 		<div><button type="submit">更新状态</button></div>
-		<input type="hidden" value="<?=$id?>" name="id" />
+		<input type="hidden" value="<?php echo $id?>" name="id" />
 	</form>
 	<div class="picture">
 
 	</div>
 	<div class="new">
-		<form id="album_add_form" action="<?=get_url("User/picture_add")?>" class="clearfix" method="post" enctype="MULTIPART/FORM-DATA">
+		<form id="album_add_form" action="<?php echo get_url("User/picture_add")?>" class="clearfix" method="post" enctype="MULTIPART/FORM-DATA">
 			<div class="img">
 				<label>上传图片:<input name="file" type="file"></label>
 			</div>
@@ -31,7 +31,7 @@
 					<textarea name="description" rows="5" cols="30"></textarea>
 				</div>
 				<p><button type="submit">添加</button></p>
-				<input type="hidden" name="album" value="<?=$id?>" />
+				<input type="hidden" name="album" value="<?php echo $id?>" />
 			</div>
 		</form>
 	</div>

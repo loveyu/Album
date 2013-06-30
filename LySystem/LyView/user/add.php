@@ -10,7 +10,7 @@
 			});
 		});
 	</script>
-	<form action="<?=get_url("User/add_ajax")?>" method="post">
+	<form action="<?php echo get_url("User/add_ajax")?>" method="post">
 		<p><label>画集标题：<input name="title" value="" type="text"></label></p>
 		<p><label>是否公开：<select name="public">
 			<option value="yes">公开</option>

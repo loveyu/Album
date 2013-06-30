@@ -5,12 +5,12 @@
 		?>
 		<script>
 			$(function () {
-				alert('<?=$err?>');
+				alert('<?php echo $err?>');
 			});
 		</script>
 		<?php } ?>
 	<h3>用户注册</h3>
-	<form action="<?=get_url("Login/register_action")?>" method="post">
+	<form action="<?php echo get_url("Login/register_action")?>" method="post">
 		<p><label>用户名:<input class="input" name="user" type="text"/></label></p>
 
 		<p><label>密码：<input class="input" name="password" type="password"/></label></p>

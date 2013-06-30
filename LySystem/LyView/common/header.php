@@ -4,33 +4,33 @@
 	<title><?php $_LibTemplate->the_title()?></title>
 <?php $_LibTemplate->the_head("\t")?>
 	<script>
-		URL = "<?=get_url()?>";
+		URL = "<?php echo get_url()?>";
 <?php if (is_login()) { ?>
-		USER = {id:<?=get_user_id()?>, user:"<?=get_user_name()?>"};
+		USER = {id:<?php echo get_user_id()?>, user:"<?php echo get_user_name()?>"};
 <?php }?>
 	</script>
 </head>
 <body>
 <div id="container">
 	<div id="header">
-		<a class="album" href="<?=get_url("album")?>">图汇</a>
-		<a class="home" href="<?=get_url()?>">主页</a>
-		<img class="logo" src="<?=get_file_url("css/img/logo.png")?>" alt="logo_cwhy" />
+		<a class="album" href="<?php echo get_url("album")?>">图汇</a>
+		<a class="home" href="<?php echo get_url()?>">主页</a>
+		<img class="logo" src="<?php echo get_file_url("css/img/logo.png")?>" alt="logo_cwhy" />
 		<div class="message">
-			<h1><?=get_site_name()?></h1>
-			<p><?=get_site_description()?></p>
+			<h1><?php echo get_site_name()?></h1>
+			<p><?php echo get_site_description()?></p>
 		</div>
 		<div class="menu">
 			<ul>
-				<li><a href="<?=get_url("User")?>">用户中心</a></li>
+				<li><a href="<?php echo get_url("User")?>">用户中心</a></li>
 <?php if(!is_login()){?>
-				<li><a href="<?=get_url("login")?>">登录</a></li>
-				<li><a href="<?=get_url("register")?>">注册</a></li>
+				<li><a href="<?php echo get_url("login")?>">登录</a></li>
+				<li><a href="<?php echo get_url("register")?>">注册</a></li>
 <?php }else{?>
 <?php if(is_admin()){?>
-				<li><a href="<?=get_url("Admin")?>">管理中心</a></li>
+				<li><a href="<?php echo get_url("Admin")?>">管理中心</a></li>
 <?php }?>
-				<li><a href="<?=get_url("logout")?>">登出</a></li>
+				<li><a href="<?php echo get_url("logout")?>">登出</a></li>
 <?php }?>
 
 			</ul>
