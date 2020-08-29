@@ -91,7 +91,8 @@ class LyCore
 					if (!empty($agr)) {
 						call_user_func_array(array($page, $list[$i + 1]), $agr);
 					} else {
-						$page->$list[$i + 1]();
+					    $func =$list[$i + 1];
+						$page->$func();
 					}
 				} else {
 					if (!in_array('main', $methods)) {
