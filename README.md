@@ -13,7 +13,7 @@ PHP精美图汇网站
 
 ## 范例网站
 
-https://demo.loveyu.info/Album
+https://demo.loveyu.net/Album
 
 ## 项目主页
 
