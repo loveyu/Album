@@ -31,7 +31,7 @@ function get_upload_path($file=''){
 			$path = "pic";
 		}
 		if(!is_dir(WEB_PATH.$path."/")){
-			if(mkdir(WEB_PATH.$path."/")){
+			if(mkdir($concurrentDirectory = WEB_PATH.$path."/") || !is_dir($concurrentDirectory)){
 				return false;
 			}
 		}
@@ -52,10 +52,10 @@ function get_pic($file){
 			$path = "pic";
 		}
 		$path = str_replace("\\","/",$path);
-		if($path{0}=="/"){
+		if($path[0] =="/"){
 			$path = substr($path,1);
 		}
-		if($path{strlen($path)-1}=="/"){
+		if($path[strlen($path)-1] =="/"){
 			$path = substr($path,1);
 		}
 		define('PIC_URL',WEB_FILE_URL.$path."/");

@@ -27,7 +27,9 @@ class medoo
 	protected $option = array();
 
 	protected $count_number;
-	
+
+	public $pdo;
+
 	public function __construct($options)
 	{
 		try {
@@ -118,7 +120,7 @@ class medoo
 			$temp[] = is_int($value) ? $value : $this->pdo->quote($value);
 		}
 
-		return implode($temp, ',');
+		return implode(',', $temp);
 	}
 	
 	protected function inner_conjunct($data, $conjunctor, $outer_conjunctor)
@@ -238,7 +240,10 @@ class medoo
 							$clause_wrap[] = $column . ' LIKE ' . $this->quote('%' . $keyword . '%');
 						}
 					}
-					$where_clause .= ($where_clause != '' ? ' AND ' : ' WHERE ') . '(' . implode($clause_wrap, ' ' . $connector . ' ') . ')';
+					$where_clause .= ($where_clause != '' ? ' AND ' : ' WHERE ') . '(' . implode(
+							' ' . $connector . ' ',
+							$clause_wrap
+						) . ')';
 				}
 			}
 			if (isset($where['MATCH']))
@@ -246,7 +251,7 @@ class medoo
 				$match_query = $where['MATCH'];
 				if (is_array($match_query) && isset($match_query['columns']) && isset($match_query['keyword']))
 				{
-					$where_clause .= ($where_clause != '' ? ' AND ' : ' WHERE ') . ' MATCH (' . implode($match_query['columns'], ', ') . ') AGAINST (' . $this->quote($match_query['keyword']) . ')';
+					$where_clause .= ($where_clause != '' ? ' AND ' : ' WHERE ') . ' MATCH (' . implode(', ', $match_query['columns']) . ') AGAINST (' . $this->quote($match_query['keyword']) . ')';
 				}
 			}
 			if (isset($where['GROUP']))
@@ -391,7 +396,7 @@ class medoo
 
 	public function has($table, $where)
 	{
-		return $this->query('SELECT EXISTS(SELECT 1 FROM ' . $table . $this->where_clause($where) . ')')->fetchColumn() === '1';
+		return (string)($this->query('SELECT EXISTS(SELECT 1 FROM ' . $table . $this->where_clause($where) . ')')->fetchColumn()) === '1';
 	}
 
 	public function count($table, $where = null)
