@@ -1,16 +1,31 @@
 <?php
 class LibGet
 {
-	private $album_sql = 'SELECT album.id AS album_id, album.name AS album_name, album.user AS user_id,
-			user.user AS user_name, picture.file AS pic_file,
-			picture.title AS title, picture.tag AS tag
-			FROM album
-			INNER JOIN picture ON album.id = picture.album
-			AND album.public = \'yes\'
-			AND album.status =1
-			INNER JOIN user ON user.id = album.user
-			GROUP BY picture.album
-			ORDER BY album.id DESC';
+	private $album_sql = 'SELECT sub.album_id,
+       sub.album_name,
+       sub.user_id,
+       sub.user_name,
+       sub.pic_file,
+       sub.title,
+       sub.tag
+FROM (
+         SELECT album.id         AS album_id,
+                album.name       AS album_name,
+                album.user       AS user_id,
+                user.user        AS user_name,
+                picture.id AS pic_id,
+                picture.file AS pic_file,
+                picture.title    AS title,
+                picture.tag      AS tag,
+                ROW_NUMBER() OVER (PARTITION BY album.id ORDER BY picture.id DESC) AS row_num
+         FROM album
+                  INNER JOIN picture ON album.id = picture.album
+                  INNER JOIN user ON user.id = album.user
+         WHERE album.public = \'yes\'
+           AND album.status = 1
+     ) AS sub
+WHERE sub.row_num = 1
+ORDER BY sub.album_id DESC';
 	private $album_count = 'select count(*) from (
 		SELECT album FROM album
 		INNER JOIN picture ON album.id = picture.album
