@@ -20,7 +20,7 @@ class LyTime{
         return ((float)$usec + (float)$sec); 
     }
 	public function stop(){
-		$this->end_time = $this->begin = $this->get_microtime();
+		$this->end_time = $this->get_microtime();
 	}
 	public function get_second(){
 		if($this->end_time==0)$this->stop();

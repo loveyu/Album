@@ -30,6 +30,8 @@ class medoo
 
 	public $pdo;
 
+	public $queryString;
+
 	public function __construct($options)
 	{
 		try {

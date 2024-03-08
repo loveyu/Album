@@ -4,12 +4,14 @@ LyCore
 Copyright (c) 2013 loveyu
 Released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 
 */
+#[AllowDynamicProperties]
 class LyCore
 {
 	private $config;
 	static $core;
 	public $lib;
 	public $helper;
+	public $web_check;
 	private $filter;
 	private $core_lib;
 	private $flag_404;

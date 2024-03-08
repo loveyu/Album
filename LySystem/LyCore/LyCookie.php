@@ -8,6 +8,7 @@ class LyCookie{
 	private $domain;
 	private $hash;
 	private $prefix;
+	public $_array;
 	function __construct(){
 		$this->domain = get_config('system','cookie_domain');
 		$this->hash = get_config('system','cookie_hash');
@@ -18,8 +19,9 @@ class LyCookie{
 		$arr = func_get_args();
 		$array = $_COOKIE;
 		foreach($arr as $v){
-			if(isset($array[$this->prefix.$v])){
-				$array = $array[$this->prefix.$v];
+            $k = $this->prefix.$v;
+			if(isset($array[$k])){
+				$array = $array[$k];
 			}else{
 				return false;
 			}
